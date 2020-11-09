@@ -2,12 +2,12 @@
 
 ## What is it?
 
-In this exercise, you'll deploy a Cloudflare Workers project in order to build a linktree-style website. Below is a list of requirements and success criteria for your finished project.
+In this exercise, you'll deploy a Cloudflare Workers project in order to build a linktree-style website. If you have any questions, please reach out at any time!
 
 ## Requirements
 
 ### Deploy a JSON API
-Create a new Workers project using Wrangler. This project will respond to two kinds of requests, one to generate a JSON API (defined below), and second, to serve an HTML page (see "Set up an HTML page")
+Create a new Workers project using Wrangler. This project will respond to two kinds of requests, one to generate a JSON API (defined below), and second, to serve an HTML page (see "Set up an HTML page").
 
 To begin, you should define an array of links. **The links should be a JavaScript array, with a number of link objects, each with a name and URL string.** See the below example for one of these link objects:
 
@@ -87,12 +87,12 @@ Create a URL.txt that contains one line in it with the URL of your page.  For ex
 https://myassignment.mydomain.com/
 ```
 
-We will test your code by visiting the URL in that file and the /links endpoint as well.  In the above example we would test https://myassignment.mydomain.com/ and https://myassignment.mydomain.com/links .
+We will test your code by visiting the URL in that file and the /links endpoint as well.  In the above example we would test https://myassignment.mydomain.com/ and https://myassignment.mydomain.com/links.
 
 ### Extra Credit
 1. Provide social links
 
-Remove the `display: none` style from `div#social`, and add any number of social links as children to the container. The children of this container should be `a` links, with `svg` icons as the children of those links. For example SVGs, use https://simpleicons.org.
+Remove the `display: none` style from `div#social`, and add any number of social links as children to the container. The children of this container should be `a` links, with `svg` icons as the children of those links. For example SVGs, try using https://simpleicons.org, though you're welcome to use whichever service you prefer.
 
 ```js
 <div id="links">
@@ -111,4 +111,4 @@ Using the HTMLRewriter, target the `title` tag and update the text inside to you
 Using HTMLRewriter, target the `body` element and change the background color. You can simply swap out the `bg-gray-900` class with another class from [Tailwind CSS's color palette](https://tailwindcss.com/docs/customizing-colors), or set a `background-color` style to a color, gradient, or image of your choice.
 
 ### Go to the Next Step
-Do the [Systems Assignment](https://github.com/tablecheck/tablecheck-2020-systems-engineering-assignment) that depends on the work you've done here.
+Congratulations on getting this far. Take a look at the next section [Systems Assignment](https://github.com/tablecheck/tablecheck-2020-systems-engineering-assignment) which builds on top of this assignment.
