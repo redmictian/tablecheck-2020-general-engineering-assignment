@@ -2,7 +2,7 @@
 
 ## What is it?
 
-In this exercise, you'll deploy a Cloudflare Workers project in order to build a linktree-style website. If you have any questions, please reach out at any time!
+Thank you for taking the time to complete this take-home assignment. In this exercise, you'll deploy a Cloudflare Workers project in order to build a linktree-style website. If you have any questions, please reach out at any time!
 
 ## Steps
 
@@ -12,6 +12,10 @@ If you don't have one already, please sign up for one at https://www.cloudflare.
 
 > _Cloudflare Workers provides a serverless execution environment that allows you to create entirely new applications or augment existing ones without configuring or maintaining infrastructure._
 > - _From: https://developers.cloudflare.com/workers/_
+
+### Create a GitHub Repository
+
+Please clone this repository publically and use it for the rest of this exercise.
 
 ### Deploy a JSON API
 Create a new Workers project using Wrangler. This project will respond to two kinds of requests, one to generate a JSON API (defined below), and second, to serve an HTML page (see "Set up an HTML page").
@@ -84,7 +88,7 @@ Once you've passed the static HTML response through your HTMLRewriter instance, 
 
 Ensure that the correct `Content-type` header is set for this page, allowing it to render as HTML in a browser.
 
-Once you've completed the code for this project, you can deploy it using `wrangler publish`. Follow our Quick Start guide to learn how to deploy Workers applications. You should submit both the JSON API URL and your deployed webpage for grading.
+Once you've completed the code for this project, you can deploy it using `wrangler publish`. If you need help, please follow the CloudFlare Worker Quick Start guide to learn how to deploy Workers applications. You should submit both the JSON API URL and your deployed webpage at the end of the next exercise in the format described in the next step.
 
 #### Add a link to your deployed worker to your repo
 
