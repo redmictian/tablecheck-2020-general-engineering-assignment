@@ -4,7 +4,14 @@
 
 In this exercise, you'll deploy a Cloudflare Workers project in order to build a linktree-style website. If you have any questions, please reach out at any time!
 
-## Requirements
+## Steps
+
+### Create / Use your CloudFlare Account
+
+If you don't have one already, please sign up for one at https://www.cloudflare.com. We will be using the CloudFlare Workers service, which is described as:
+
+> _Cloudflare Workers provides a serverless execution environment that allows you to create entirely new applications or augment existing ones without configuring or maintaining infrastructure._
+> - _From: https://developers.cloudflare.com/workers/_
 
 ### Deploy a JSON API
 Create a new Workers project using Wrangler. This project will respond to two kinds of requests, one to generate a JSON API (defined below), and second, to serve an HTML page (see "Set up an HTML page").
