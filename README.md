@@ -17,6 +17,12 @@ If you don't have one already, please sign up for one at https://www.cloudflare.
 
 Please clone this repository publically and use it for the rest of this exercise.
 
+### Languages to use
+
+This task requires an understanding of manipulating an object, converting it to JSON and returning it as part of an API. You are welcome to use any language supported by CloudFlare Workers (most languages are, and for everything else, there's WebAssembly if you wish to use that route). For instance, Python is supported directly by CloudFlare Workers, and [Go is supported by WASM](https://nicholas.cloud/blog/continuing-hijinks-with-cloudflare-workers/).
+
+Please see the following page for examples of directly supported languages: https://blog.cloudflare.com/cloudflare-workers-announces-broad-language-support/
+
 ### Deploy a JSON API
 Create a new Workers project using Wrangler. This project will respond to two kinds of requests, one to generate a JSON API (defined below), and second, to serve an HTML page (see "Set up an HTML page").
 
