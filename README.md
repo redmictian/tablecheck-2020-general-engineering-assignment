@@ -26,7 +26,7 @@ Please see the following page for examples of directly supported languages: http
 ### Deploy a JSON API
 Create a new Workers project using Wrangler. This project will respond to two kinds of requests, one to generate a JSON API (defined below), and second, to serve an HTML page (see "Set up an HTML page").
 
-To begin, you should define an array of links. **The links should be a JavaScript array, with a number of link objects, each with a name and URL string.** See the below example for one of these link objects:
+To begin, you should define an array of links. **The links should be an array, with a number of link objects, each with a name and URL string.** See the below example for one of these link objects:
 
 ```json
 { "name": "Link Name", "url": "https://linkurl" }
@@ -45,20 +45,20 @@ With your API deployed, you can flesh out the rest of your application. If the p
 
 1. Retrieve a static HTML page
 2. Get the links from your previously deployed JSON response
-3. Use HTMLRewriter to add these links to the static HTML page
+3. Use HTMLRewriter or the relevant method in your chosen language to add these links to the static HTML page
 4. Return the transformed HTML page from the Worker
 
 #### Retrieve a static HTML page
 Your Worker should begin by making a `fetch` request to `https://static-links-page.signalnerve.workers.dev`.
 
-The response from this URL will be a static HTML page that you can enhance using HTMLRewriter. 
+The response from this URL will be a static HTML page that you can enhance using HTMLRewriter (Javascript) or the relevant method in your chosen language (https://developers.cloudflare.com/workers/runtime-apis/html-rewriter). 
 
 Note that you need to make the request to this HTML page _in_ your Worker. The URL will return multiple static HTML pages randomly, so you should not copy-paste the HTML into your Worker, as you will not complete the exercise correctly.
 
-#### Use HTMLRewriter to update the page
-Using HTMLRewriter, you should transform the static HTML response from $URL, and pass in the links array you previously defined into the page. Note that this means that your links array should be available as a variable for both your previous `/links` endpoint, as well as this static HTML section. Target the `div#links` selector, and add in a new `a` for each link in your API using HTMLRewriter. 
+#### Update the page
+You should transform the static HTML response from $URL, and pass in the links array you previously defined into the page. Note that this means that your links array should be available as a variable for both your previous `/links` endpoint, as well as this static HTML section. Target the `div#links` selector, and add in a new `a` for each link in your API. 
 
-In order to use the links inside of your HTMLRewriter handler, you can use a custom class to pass in arguments, for instance:
+In order to use the links inside of your handler, you can use a custom class to pass in arguments, for instance:
 
 ```js
 class LinksTransformer {
@@ -90,7 +90,7 @@ Do the same for `h1#name`, setting the text to your username.
 
 #### Return the transformed HTML page from the Worker
 
-Once you've passed the static HTML response through your HTMLRewriter instance, you can return it as the response from the Worker. 
+Once you've passed the static HTML response through your Worker, you can return it as the response from the Worker. 
 
 Ensure that the correct `Content-type` header is set for this page, allowing it to render as HTML in a browser.
 
